@@ -11,7 +11,7 @@
 angular.module('websockets', [])
 .controller('WebsocketsController', ['$scope', '$http', function ($scope, $http) {
 
-	$http.get('../../../../services/v4/ops/websockets').then(function(response) {
+	$http.get('../../../ops/websockets').then(function(response) {
 		$scope.websocketsList = response.data;
 	});
 
