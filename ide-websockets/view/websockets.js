@@ -9,12 +9,12 @@
  *   SAP - initial API and implementation
  */
 angular.module('websockets', [])
-.controller('WebsocketsController', ['$scope', '$http', function ($scope, $http) {
+	.controller('WebsocketsController', ['$scope', '$http', function ($scope, $http) {
 
-	$http.get('../../../ops/websockets').then(function(response) {
-		$scope.websocketsList = response.data;
+		$http.get('/services/v4/ops/websockets').then(function (response) {
+			$scope.websocketsList = response.data;
+		});
+
+	}]).config(function ($sceProvider) {
+		$sceProvider.enabled(false);
 	});
-
-}]).config(function($sceProvider) {
-    $sceProvider.enabled(false);
-});

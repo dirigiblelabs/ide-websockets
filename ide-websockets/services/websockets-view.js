@@ -8,14 +8,13 @@
  * Contributors:
  *   SAP - initial API and implementation
  */
-exports.getView = function() {
-	var view = {
-			"id":"websockets",
-			"name":"Websockets",
-			"factory":"frame",
-			"region":"center-middle",
-			"label":"Websockets",
-			"link":"../ide-websockets/view/websockets.html"
+exports.getView = function () {
+	return {
+		"id": "websockets",
+		"name": "Websockets",
+		"factory": "frame",
+		"region": "center-middle",
+		"label": "Websockets",
+		"link": "../ide-websockets/view/websockets.html"
 	};
-	return view;
 };

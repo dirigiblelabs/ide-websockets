@@ -8,12 +8,19 @@
  * Contributors:
  *   SAP - initial API and implementation
  */
-exports.getTemplate = function() {
-	var view = {
-			"name":"websocket",
-			"label":"Websocket",
-			"extension":"websocket",
-			"data":JSON.stringify(JSON.parse('{"handler":"myproject/myhandler.js","endpoint":"myendpoint","description":"My Websocket"}'), null, 2)
+exports.getTemplate = function () {
+	return {
+		"name": "websocket",
+		"label": "Websocket",
+		"extension": "websocket",
+		"data": JSON.stringify(
+			{
+				"handler": "myproject/myhandler.js",
+				"endpoint": "myendpoint",
+				"description": "My Websocket"
+			},
+			null,
+			2
+		)
 	};
-	return view;
 };
