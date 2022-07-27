@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2010-2020 SAP and others.
+ * Copyright (c) 2010-2022 SAP and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -8,13 +8,19 @@
  * Contributors:
  *   SAP - initial API and implementation
  */
-exports.getView = function () {
-	return {
-		"id": "websockets",
-		"name": "Websockets",
-		"factory": "frame",
-		"region": "center-middle",
-		"label": "Websockets",
-		"link": "../ide-websockets/view/websockets.html"
-	};
+
+const viewData = {
+	id: "websockets",
+	name: "WebSockets",
+	factory: "frame",
+	region: "bottom",
+	label: "WebSockets",
+	link: "../ide-websockets/view/websockets.html"
 };
+
+if (typeof exports !== 'undefined') {
+	exports.getView = function () {
+		return viewData;
+	}
+}
+
